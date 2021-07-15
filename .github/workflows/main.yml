@@ -25,5 +25,6 @@ jobs:
       - name: Build project
         run: yarn build
 
-			- name: Deploy to gh
-				run:	gh-pages -d build
+      - name: Deploy to gh
+        run: gh-pages -d build
+
