@@ -9,7 +9,6 @@ const Dropdown = ({ title, options, onSelect }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	const handleSelection = (option) => {
-		// eslint-disable-next-line no-console
 		onSelect(option);
 		setIsOpen(false);
 	};
