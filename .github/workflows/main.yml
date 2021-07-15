@@ -14,7 +14,11 @@ jobs:
           echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
           echo "untrusted output"
           echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
-        
+          
+      - name: Set Actions Allow Unsecure Commands
+        run: |
+          echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
+
       - name: Checkout
         uses: actions/checkout@v2
 
