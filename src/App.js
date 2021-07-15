@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Dropdown } from "./presentation/components";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [selectedWeapon, setSelectedWeapon] = useState(null);
+
+	return (
+		<div className="App">
+			<div>
+				{selectedWeapon && <div>Vem pro pau com sua {selectedWeapon}</div>}
+			</div>
+			<Dropdown
+				title="Choose your weapon"
+				options={["Sword", "Shield", "Katana", "Spear", "mãe aquela gorda"]}
+				// eslint-disable-next-line no-console
+				onSelect={(e) => setSelectedWeapon(e)}
+			/>
+		</div>
+	);
 }
 
 export default App;
