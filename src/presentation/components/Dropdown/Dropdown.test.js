@@ -30,7 +30,7 @@ describe("Dropdown", () => {
 		).toBeInTheDocument();
 	});
 
-	it("Should signal when option is selected and close dropdown", () => {
+	it("Should signal when option is selected and close the dropdown", () => {
 		const onSelect = jest.fn();
 
 		render(<Dropdown title={title} options={options} onSelect={onSelect} />);
