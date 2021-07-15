@@ -11,7 +11,7 @@ function App() {
 			</div>
 			<Dropdown
 				title="Choose your weapon"
-				options={["Sword", "Shield", "Katana", "Spear", "mãe aquela gorda"]}
+				options={["Sword", "Shield", "Katana", "Spear"]}
 				// eslint-disable-next-line no-console
 				onSelect={(e) => setSelectedWeapon(e)}
 			/>
