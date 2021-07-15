@@ -28,8 +28,8 @@ jobs:
 			- name: Deploy to gh
 				run:	gh-pages -d build
 
-      - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: main # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+      # - name: Deploy to gh-pages
+      #   uses: JamesIves/github-pages-deploy-action@4.1.4
+      #   with:
+      #     branch: main # The branch the action should deploy to.
+      #     folder: build # The folder the action should deploy.
