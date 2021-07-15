@@ -9,12 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: log untrusted output
-        run: |
-          echo "::stop-commands::`echo -n ${{ secrets.GITHUB_TOKEN }} | sha256sum | head -c 64`::"
-          echo "untrusted output"
-          echo "::`echo -n ${{ secrets.GITHUB_TOKEN }} | sha256sum | head -c 64`::"
-          
       - name: Set Actions Allow Unsecure Commands
         run: |
           echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
