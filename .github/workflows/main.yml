@@ -9,16 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: log untrusted output
-        run: |
-          echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
-          echo "untrusted output"
-          echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
-          
-      - name: Set Actions Allow Unsecure Commands
-        run: |
-          echo "ACTIONS_ALLOW_UNSECURE_COMMANDS=true" >> $GITHUB_ENV
-
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -32,8 +22,8 @@ jobs:
         run: yarn build
 
       - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@3.5.9
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main # The branch the action should deploy to.
+          BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
