@@ -1,22 +1,33 @@
-import React, { useState } from "react";
-import { Dropdown } from "./presentation/components";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-function App() {
-	const [selectedWeapon, setSelectedWeapon] = useState(null);
+import { AVAILABLE_ROUTES } from "./services/contentProviders";
 
-	return (
-		<div className="App">
-			<div>
-				{selectedWeapon && <div>Vem pro pau com sua {selectedWeapon}</div>}
-			</div>
-			<Dropdown
-				title="Choose your weapon"
-				options={["Sword", "Shield", "Katana", "Spear"]}
-				// eslint-disable-next-line no-console
-				onSelect={(e) => setSelectedWeapon(e)}
-			/>
-		</div>
-	);
-}
+const App = () => (
+	<Router>
+		<nav>
+			<ul>
+				<li>
+					<Link to="/launches">Launches</Link>
+				</li>
+				<li>
+					<Link to="/rockets">Rockets</Link>
+				</li>
+				<li>
+					<Link to="/new-launches">New launches</Link>
+				</li>
+			</ul>
+		</nav>
+		<Switch>
+			{AVAILABLE_ROUTES.map((route) =>
+				route.routes.map(({ path, component }, index) => (
+					<Route key={`route-${path}-${index}`} path={path}>
+						{component}
+					</Route>
+				))
+			)}
+		</Switch>
+	</Router>
+);
 
 export default App;
