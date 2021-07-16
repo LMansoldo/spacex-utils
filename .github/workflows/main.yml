@@ -4,16 +4,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout :space_invader: :space_invader: :space_invader: :space_invader:
+      - name: Checkout 👾 👾 👾 👾
         uses: actions/checkout@v2.3.1
 
-      - name: Installing Dependencies :space_invader: :space_invader: :space_invader:
+      - name: Installing Dependencies 👾 👾 👾
         run: yarn
 
-      - name: Build project :space_invader: :space_invader:
+      - name: Build project 👾 👾
         run: yarn build
         
-      - name: Running tests :space_invader:
+      - name: Running tests 👾
         run: yarn test
           
       - name: Deploy 🚀
