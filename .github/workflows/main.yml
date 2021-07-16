@@ -4,19 +4,19 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 👾 👾 👾 👾
+      - name: 👉 Checkout 👈
         uses: actions/checkout@v2.3.1
 
-      - name: Installing Dependencies 👾 👾 👾
+      - name: 👀 Installing Dependencies 👀
         run: yarn
 
-      - name: Build project 👾 👾
+      - name: 👌 Build project 👌
         run: yarn build
         
-      - name: Running tests 👾
+      - name: 🤞 Running tests 🤞
         run: yarn test
           
-      - name: Deploy 🚀
+      - name: ☕ ☕ ☕ Deploy ☕ ☕ ☕
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages # The branch the action should deploy to.
