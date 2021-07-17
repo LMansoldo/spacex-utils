@@ -1,20 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
-const Menu = ({ routes }) => (
-	<div>
-		<nav>
-			<ul>
-				{routes.map(({ path, prefixUrlMatch, title }, index) => (
-					<Link to={`${path}`} key={`${prefixUrlMatch}-${index}`}>
-						{title}
-					</Link>
-				))}
-			</ul>
-		</nav>
-	</div>
-);
+import {
+	MenuContainer,
+	MenuNavigation,
+	MenuList,
+	MenuItem,
+	MenuFooter,
+} from './styled';
+
+const Menu = ({ routes }) => {
+	const { t } = useTranslation();
+	return (
+		<MenuContainer>
+			<MenuNavigation>
+				<MenuList>
+					{routes.map(({ path, prefixUrlMatch }, index) => (
+						<MenuItem key={`${prefixUrlMatch}-${index}`} className="mn-item">
+							<Link to={`${path}`}>{t(`${prefixUrlMatch}.title`)}</Link>
+						</MenuItem>
+					))}
+				</MenuList>
+			</MenuNavigation>
+			<MenuFooter />
+		</MenuContainer>
+	);
+};
 
 Menu.propTypes = {
 	routes: PropTypes.arrayOf(PropTypes.object).isRequired,

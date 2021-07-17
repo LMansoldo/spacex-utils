@@ -11,7 +11,7 @@ const NewLaunches = React.lazy(() =>
 const ContentProviders = () => [
 	{
 		title: 'Lançamentos',
-		prefixUrlMatch: 'lancamentos',
+		prefixUrlMatch: 'launches',
 		background: theme.launchesColor,
 		path: '/launches',
 		component: () => <Launches />,
@@ -19,7 +19,7 @@ const ContentProviders = () => [
 	},
 	{
 		title: 'Foguetes',
-		prefixUrlMatch: 'foguetes',
+		prefixUrlMatch: 'rockets',
 		background: theme.rocketsColor,
 		path: '/rockets',
 		component: () => <Rockets />,
