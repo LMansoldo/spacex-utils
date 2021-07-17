@@ -6,7 +6,7 @@ const Rockets = () => {
 
 	return (
 		<div>
-			<span>{t('rockets.title')}</span>
+			<span>{t("rockets.title")}</span>
 		</div>
 	);
 };

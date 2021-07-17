@@ -20,10 +20,9 @@ module.exports = {
 	plugins: ["react", "prettier"],
 	rules: {
 		"prettier/prettier": [
-			"error",
+			"off",
 			{ tabWidth: 2, useTabs: true },
-			{ singleQuote: true, parser: "flow" },
-			{ jsxSingleQuote: true },
+			{ singleQuote: true, jsxSingleQuote: true }
 		],
 		"react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".js"] }],
 		"import/prefer-default-export": "off",
