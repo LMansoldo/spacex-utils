@@ -1,12 +1,12 @@
 {
 	"translation": {
-		"lancamentos": {
+		"launches": {
 			"title": "lançamentos"
 		},
-		"foguetes": {
+		"rockets": {
 			"title": "foguetes"
 		},
-		"novos-lancamentos": {
+		"new-launches": {
 			"title": "novos lançamentos"
 		}
 	}

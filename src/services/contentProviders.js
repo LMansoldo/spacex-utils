@@ -1,37 +1,38 @@
+/* eslint-disable react/display-name */
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { theme } from "../styles/variables";
-import { Launches, NewLaunches, Rockets } from "../presentation/pages";
 
-const ContentProviders = () => {
-	const { t } = useTranslation();
+const Launches = React.lazy(() => import("../presentation/pages/launches"));
+const Rockets = React.lazy(() => import("../presentation/pages/rockets"));
+const NewLaunches = React.lazy(() =>
+	import("../presentation/pages/new-launches")
+);
 
-	return [
-		{
-			title: "Lançamentos",
-			prefixUrlMatch: "lancamentos",
-			background: theme.launchesColor,
-			path: "/launches",
-			component: <Launches title={t("launches.title")} />,
-			anchors: [],
-		},
-		{
-			title: "Foguetes",
-			prefixUrlMatch: "foguetes",
-			background: theme.rocketsColor,
-			path: "/rockets",
-			component: <Rockets title={t("rockets.title")} />,
-			anchors: [],
-		},
-		{
-			title: "Novos Lançamentos",
-			prefixUrlMatch: "new-launches",
-			background: theme.googleColor,
-			path: "/new-launches",
-			component: <NewLaunches title={t("new-launches.title")} />,
-			anchors: [],
-		},
-	];
-};
+const ContentProviders = () => [
+	{
+		title: "Lançamentos",
+		prefixUrlMatch: "lancamentos",
+		background: theme.launchesColor,
+		path: "/launches",
+		component: () => <Launches />,
+		anchors: [],
+	},
+	{
+		title: "Foguetes",
+		prefixUrlMatch: "foguetes",
+		background: theme.rocketsColor,
+		path: "/rockets",
+		component: () => <Rockets />,
+		anchors: [],
+	},
+	{
+		title: "Novos Lançamentos",
+		prefixUrlMatch: "new-launches",
+		background: theme.googleColor,
+		path: "/new-launches",
+		component: () => <NewLaunches />,
+		anchors: [],
+	},
+];
 
 export default ContentProviders;

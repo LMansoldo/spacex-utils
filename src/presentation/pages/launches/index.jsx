@@ -1,10 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
-const Launches = ({ title }) => <div>{title}</div>;
-
-Launches.propTypes = {
-	title: PropTypes.string.isRequired,
+const Launches = () => {
+	const { t } = useTranslation();
+	return (
+		<div>
+			<span>
+				{t('launches.title')}
+			</span>
+		</div>
+	)
 };
 
 export default Launches;
