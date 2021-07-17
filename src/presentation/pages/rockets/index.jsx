@@ -1,10 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Rockets = ({ title }) => <div>{title} rockets </div>;
+const Rockets = () => {
+	const { t } = useTranslation();
 
-Rockets.propTypes = {
-	title: PropTypes.string.isRequired,
+	return (
+		<div>
+			<span>{t('rockets.title')}</span>
+		</div>
+	);
 };
 
 export default Rockets;

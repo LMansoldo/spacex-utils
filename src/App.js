@@ -1,20 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Menu } from './presentation/components';
+import ContentProviders from './services/contentProviders';
 
-import { Menu } from "./presentation/components";
-import { AVAILABLE_ROUTES } from "./services/contentProviders";
-
-const App = () => (
-	<Router>
-		<Menu routes={AVAILABLE_ROUTES} />
-		<Switch>
-			{AVAILABLE_ROUTES.map(({ path, component }, index) => (
-				<Route key={`route-${path}-${index}`} path={path}>
-					{component}
-				</Route>
-			))}
-		</Switch>
-	</Router>
-);
+const App = () => {
+	const AVAILABLE_ROUTES = ContentProviders();
+	return (
+		<Router>
+			<Menu routes={AVAILABLE_ROUTES} />
+			<Suspense fallback={<span>loading</span>}>
+				<Switch>
+					{AVAILABLE_ROUTES.map(({ path, component }, index) => (
+						<Route
+							key={`route-${path}-${index}`}
+							path={path}
+							render={component}
+						/>
+					))}
+				</Switch>
+			</Suspense>
+		</Router>
+	);
+};
 
 export default App;

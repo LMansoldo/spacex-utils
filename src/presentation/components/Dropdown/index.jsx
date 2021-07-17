@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 /* 
 	1. Dropdown começa fechado
 	2. Quero que o dd mostre opções
