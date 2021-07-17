@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.aside`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 320px;
+	max-width: 220px;
 	width: 100%;
-	height: 100%;
+	height: 91%;
 	border-right: 2px solid #e3e3e3;
 	position: fixed;
 	background: #fff;
 	-webkit-box-shadow: 3px 0px 10px -8px #828282;
 	box-shadow: 3px 0px 10px -8px #828282;
 	left: 0;
+	top: 92px;
 `;
 
 export const MenuNavigation = styled.nav`
