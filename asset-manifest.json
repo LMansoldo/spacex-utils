@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/spacex-utils/static/js/main.f6b644a6.chunk.js",
-    "main.js.map": "/spacex-utils/static/js/main.f6b644a6.chunk.js.map",
-    "runtime-main.js": "/spacex-utils/static/js/runtime-main.c1847085.js",
-    "runtime-main.js.map": "/spacex-utils/static/js/runtime-main.c1847085.js.map",
+    "main.js": "/spacex-utils/static/js/main.a2480467.chunk.js",
+    "main.js.map": "/spacex-utils/static/js/main.a2480467.chunk.js.map",
+    "runtime-main.js": "/spacex-utils/static/js/runtime-main.93d44a7c.js",
+    "runtime-main.js.map": "/spacex-utils/static/js/runtime-main.93d44a7c.js.map",
     "static/js/2.1b50d456.chunk.js": "/spacex-utils/static/js/2.1b50d456.chunk.js",
     "static/js/2.1b50d456.chunk.js.map": "/spacex-utils/static/js/2.1b50d456.chunk.js.map",
-    "static/js/3.7a5cf5b1.chunk.js": "/spacex-utils/static/js/3.7a5cf5b1.chunk.js",
-    "static/js/3.7a5cf5b1.chunk.js.map": "/spacex-utils/static/js/3.7a5cf5b1.chunk.js.map",
-    "static/js/4.89ef92d1.chunk.js": "/spacex-utils/static/js/4.89ef92d1.chunk.js",
-    "static/js/4.89ef92d1.chunk.js.map": "/spacex-utils/static/js/4.89ef92d1.chunk.js.map",
-    "static/js/5.13f62df9.chunk.js": "/spacex-utils/static/js/5.13f62df9.chunk.js",
-    "static/js/5.13f62df9.chunk.js.map": "/spacex-utils/static/js/5.13f62df9.chunk.js.map",
+    "static/js/3.18444b1e.chunk.js": "/spacex-utils/static/js/3.18444b1e.chunk.js",
+    "static/js/3.18444b1e.chunk.js.map": "/spacex-utils/static/js/3.18444b1e.chunk.js.map",
+    "static/js/4.e81dbc4a.chunk.js": "/spacex-utils/static/js/4.e81dbc4a.chunk.js",
+    "static/js/4.e81dbc4a.chunk.js.map": "/spacex-utils/static/js/4.e81dbc4a.chunk.js.map",
+    "static/js/5.1e645eaf.chunk.js": "/spacex-utils/static/js/5.1e645eaf.chunk.js",
+    "static/js/5.1e645eaf.chunk.js.map": "/spacex-utils/static/js/5.1e645eaf.chunk.js.map",
     "static/js/6.1b5a35e4.chunk.js": "/spacex-utils/static/js/6.1b5a35e4.chunk.js",
     "static/js/6.1b5a35e4.chunk.js.map": "/spacex-utils/static/js/6.1b5a35e4.chunk.js.map",
     "index.html": "/spacex-utils/index.html",
@@ -19,8 +19,8 @@
     "static/media/getFetch.cjs": "/spacex-utils/static/media/getFetch.582d29c4.cjs"
   },
   "entrypoints": [
-    "static/js/runtime-main.c1847085.js",
+    "static/js/runtime-main.93d44a7c.js",
     "static/js/2.1b50d456.chunk.js",
-    "static/js/main.f6b644a6.chunk.js"
+    "static/js/main.a2480467.chunk.js"
   ]
 }
