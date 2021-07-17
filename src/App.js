@@ -1,7 +1,7 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Menu } from "./presentation/components";
-import ContentProviders from "./services/contentProviders";
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Menu } from './presentation/components';
+import ContentProviders from './services/contentProviders';
 
 const App = () => {
 	const AVAILABLE_ROUTES = ContentProviders();

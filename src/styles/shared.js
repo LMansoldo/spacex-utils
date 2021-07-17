@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
-import { colors, theme } from "~/styles/variables";
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import { colors, theme } from '~/styles/variables';
 
 export const TitleHome = styled.h2`
 	color: ${colors.white};
@@ -64,7 +64,7 @@ export const ContainerDiv = styled.div`
 
 export const Row = styled.div`
 	display: flex;
-	margin: ${({ margin }) => margin || "0"};
+	margin: ${({ margin }) => margin || '0'};
 `;
 
 export const Col = styled.div`
@@ -78,5 +78,5 @@ export const Sep = styled.hr`
 	border-bottom-color: ${colors.borderDark};
 	border-bottom-width: 1px;
 	box-shadow: 1px 1px 1px ${colors.borderLight};
-	margin: ${({ margin }) => margin || "50px 0"};
+	margin: ${({ margin }) => margin || '50px 0'};
 `;

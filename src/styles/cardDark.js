@@ -1,9 +1,9 @@
-import styled from "@emotion/styled/macro";
-import { theme } from "~/styles/variables";
-import { BorderBox } from "~/styles/shared";
+import styled from '@emotion/styled/macro';
+import { theme } from '~/styles/variables';
+import { BorderBox } from '~/styles/shared';
 
 export const Card = styled(BorderBox)`
-	height: ${({ height }) => height || "375px"};
+	height: ${({ height }) => height || '375px'};
 `;
 
 export const Header = styled.div`
@@ -16,13 +16,13 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.div`
-	font-size: ${({ fontSize }) => fontSize || "16"}px;
+	font-size: ${({ fontSize }) => fontSize || '16'}px;
 	font-weight: 300;
 	color: ${theme.instantCardText};
 	text-transform: uppercase;
 
 	@media (min-width: 1200px) {
-		font-size: ${({ fontSize }) => fontSize || "20"}px;
+		font-size: ${({ fontSize }) => fontSize || '20'}px;
 	}
 `;
 

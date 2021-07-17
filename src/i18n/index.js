@@ -1,12 +1,12 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import Backend from "i18next-http-backend";
-import PTBR from "./locales/pt-BR/translation.json";
-import ENUS from "./locales/en-US/translation.json";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import Backend from 'i18next-http-backend';
+import PTBR from './locales/pt-BR/translation.json';
+import ENUS from './locales/en-US/translation.json';
 
 const resources = {
-	"pt-BR": PTBR,
-	"en-us": ENUS,
+	'pt-BR': PTBR,
+	'en-us': ENUS,
 };
 
 i18n
