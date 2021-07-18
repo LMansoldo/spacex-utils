@@ -10,8 +10,9 @@ export const MenuContainer = styled.aside`
 	border-right: 2px solid #e3e3e3;
 	position: fixed;
 	background: #fff;
-	-webkit-box-shadow: 3px 0px 10px -8px #828282;
-	box-shadow: 3px 0px 10px -8px #828282;
+	box-shadow: -1px 2px 9px -2px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: -1px 2px 9px -2px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow: -1px 2px 9px -2px rgba(0, 0, 0, 0.9);
 	left: 0;
 	top: 92px;
 `;
