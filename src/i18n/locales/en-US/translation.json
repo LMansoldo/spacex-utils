@@ -14,6 +14,9 @@
 				"show": "Show more",
 				"hide": "Hide"
 			}
+		},
+		"search": {
+			"label": "Search"
 		}
 	}
 }

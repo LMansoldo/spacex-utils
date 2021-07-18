@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
 	display: flex;
-	padding: 0 15px;
 	margin: 0;
 	width: 100%;
 	height: 90px;
@@ -18,6 +17,11 @@ export const HeaderContainer = styled.header`
 	position: fixed;
 	top: 0;
 	left: 0;
+
+	& .spcx-header-container {
+		display: flex;
+		justify-content: space-between;
+	}
 `;
 
 export const HeaderBrand = styled.div`

@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Input = styled.input`
 	border: 1px solid #e3e3e3;
 	border-radius: 5px;
-	height: ${({ height }) => height || '65px'};
+	height: ${({ height }) => height || '40px'};
 	width: ${({ width }) => width || '100%'};
 	position: relative;
 	padding: 0 30px;
@@ -26,17 +26,20 @@ export const Input = styled.input`
 
 export const Label = styled.label`
 	width: fit-content;
-	background: #fff;
-	padding: ${({ isFocused }) => (isFocused ? '0 10px' : '0')};
+	background: transparent;
+	box-shadow: 0px -12px 0px -4px rgb(255, 255, 255) inset;
+	-webkit-box-shadow: 0px -12px 0px -4px rgb(255, 255, 255) inset;
+	-moz-box-shadow: 0px -12px 0px -4px rgb(255, 255, 255) inset;
+	padding: ${({ isFocused }) => (isFocused ? '0 5px' : '0')};
 	position: absolute;
-	top: ${({ isFocused }) => (isFocused ? '15px' : '45px')};
+	top: ${({ isFocused }) => (isFocused ? '15px' : '35px')};
 	transition: all 0.2s;
 	z-index: 1;
 	left: 30px;
 	margin-top: -25px;
 	font-size: ${({ isFocused }) => (isFocused ? '16px' : '20px')};
 	font-weight: 300;
-	color: ${({ error }) => (error ? 'red' : '#e3e3e3')};
+	color: ${({ error }) => (error ? 'red' : '#000')};
 `;
 
 export const ValidationIcon = styled.span`

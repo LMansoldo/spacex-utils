@@ -14,6 +14,9 @@
 				"show": "Mostrar mais",
 				"hide": "Mostrar menos"
 			}
+		},
+		"search": {
+			"label": "Buscar"
 		}
 	}
 }
