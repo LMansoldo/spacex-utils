@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { Card } from '../../components';
@@ -6,10 +5,11 @@ import { Card } from '../../components';
 const Launches = () => {
 	const GET_LAUNCHES = gql`
 		query GetLaunchList {
-			launchesPast(limit: 10) {
+			launches(limit: 10) {
 				id
 				mission_name
 				launch_date_local
+				details
 				links {
 					article_link
 					video_link
@@ -21,9 +21,9 @@ const Launches = () => {
 					rocket_name
 				}
 				ships {
+					id
 					name
-					home_port
-					image
+					type
 				}
 			}
 		}
@@ -36,15 +36,15 @@ const Launches = () => {
 
 	return (
 		<div>
-			{data.launchesPast &&
-				data.launchesPast.map((launch) => (
+			{data.launches &&
+				data.launches.map((launch) => (
 					<Card
 						key={`spcx-launch-${launch.id}`}
-						name={launch.name}
+						name={launch.mission_name}
 						rocket={launch.rocket.rocket_name}
 						place={launch.launch_site.site_name_long}
 						date={launch.launch_date_local}
-						description="description"
+						description={launch.details}
 						shipList={launch.ships}
 					/>
 				))}

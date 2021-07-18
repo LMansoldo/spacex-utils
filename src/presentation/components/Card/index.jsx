@@ -18,11 +18,24 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 	const [readMore, setReadMore] = useState(false);
 	const { t } = useContext(SpacesContext);
 
+	// eslint-disable-next-line no-console
+	console.log(shipList);
+
 	const handleReadMoreBehavior = () => {
+		const renderShipList = () => {
+			if (shipList)
+				return shipList.map((ship) => (
+					<div key={ship.id}>
+						<span>{ship.name}</span>
+						<span>{ship.type}</span>
+					</div>
+				));
+		};
+
 		const renderAditionalFields = () => (
 			<TransitionKeyframe open>
 				<Text>{description}</Text>
-				<ShipList>{shipList}</ShipList>
+				<ShipList>{renderShipList()}</ShipList>
 			</TransitionKeyframe>
 		);
 
