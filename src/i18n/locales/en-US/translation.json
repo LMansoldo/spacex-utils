@@ -8,6 +8,9 @@
 		},
 		"new-launches": {
 			"title": "new launches"
+		},
+		"button": {
+			"readmore": "Show more"
 		}
 	}
 }
