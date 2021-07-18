@@ -1,0 +1,2 @@
+(this["webpackJsonpspacex-utils"]=this["webpackJsonpspacex-utils"]||[]).push([[5],{67:function(t,e,s){"use strict";s.r(e);var c=s(0),n=s(12),i=s(1);e.default=function(){var t=Object(c.useContext)(n.a).t;return Object(i.jsx)("div",{children:Object(i.jsx)("span",{children:t("new-launches.title")})})}}}]);
+//# sourceMappingURL=5.d8b99b38.chunk.js.map
