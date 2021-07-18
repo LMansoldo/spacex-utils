@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import SpaceContext from '../../../context';
 import Header from '../Header';
 
 import {
@@ -11,26 +11,25 @@ import {
 	MenuFooter,
 } from './styled';
 
-const Menu = ({ routes }) => (
-	<>
-		<Header />
-		<MenuContainer>
-			<MenuNavigation>
-				<MenuList>
-					{routes.map(({ path, prefixUrlMatch }, index) => (
-						<MenuItem key={`${prefixUrlMatch}-${index}`} className="mn-item">
-							<Link to={`${path}`}>{prefixUrlMatch}</Link>
-						</MenuItem>
-					))}
-				</MenuList>
-			</MenuNavigation>
-			<MenuFooter />
-		</MenuContainer>
-	</>
-);
-
-Menu.propTypes = {
-	routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+const Menu = () => {
+	const { t, routes } = useContext(SpaceContext);
+	return (
+		<>
+			<Header />
+			<MenuContainer>
+				<MenuNavigation>
+					<MenuList>
+						{routes.map(({ path, prefixUrlMatch }, index) => (
+							<MenuItem key={`${prefixUrlMatch}-${index}`} className="mn-item">
+								<Link to={`${path}`}>{t(`${prefixUrlMatch}.title`)}</Link>
+							</MenuItem>
+						))}
+					</MenuList>
+				</MenuNavigation>
+				<MenuFooter />
+			</MenuContainer>
+		</>
+	);
 };
 
 export default Menu;

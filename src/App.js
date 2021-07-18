@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Layout from './presentation/components/Layout';
 import ContentProviders from './services/contentProviders';
+import SpaceContext from './context';
 
 const App = () => {
 	const AVAILABLE_ROUTES = ContentProviders();
-	const TranslateContext = React.createContext(null);
 	const { t } = useTranslation();
 
 	return (
-		<TranslateContext.Provider translate={t}>
+		<SpaceContext.Provider value={{ t, routes: AVAILABLE_ROUTES }}>
 			<Router>
 				<Suspense fallback={<span>loading</span>}>
 					<Layout routes={AVAILABLE_ROUTES}>
@@ -26,7 +26,7 @@ const App = () => {
 					</Layout>
 				</Suspense>
 			</Router>
-		</TranslateContext.Provider>
+		</SpaceContext.Provider>
 	);
 };
 

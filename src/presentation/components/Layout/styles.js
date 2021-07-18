@@ -3,7 +3,6 @@ import { Inter } from '../../../styles/variables';
 import mediaQuery from '../../../styles/mediaQuery';
 
 export const LayoutWrapper = styled.main`
-	min-height: 100vh;
 	padding-top: 90px;
 	padding-left: 220px;
 `;
