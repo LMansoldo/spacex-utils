@@ -1,8 +1,8 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useContext } from 'react';
+import SpaceContext from '../../../context';
 
 const Launches = () => {
-	const { t } = useTranslation();
+	const { t } = useContext(SpaceContext);
 	return (
 		<div>
 			<span>{t('launches.title')}</span>

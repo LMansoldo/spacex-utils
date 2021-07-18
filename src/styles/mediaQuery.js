@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from 'styled-components';
 import breakpoints from './breakpoints';
 
 export default Object.keys(breakpoints).reduce((accumulator, label) => {

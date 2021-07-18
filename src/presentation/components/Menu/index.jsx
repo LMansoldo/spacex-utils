@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import PropTypes from 'prop-types';
+import SpaceContext from '../../../context';
 import Header from '../Header';
 
 import {
@@ -12,8 +11,8 @@ import {
 	MenuFooter,
 } from './styled';
 
-const Menu = ({ routes }) => {
-	const { t } = useTranslation();
+const Menu = () => {
+	const { t, routes } = useContext(SpaceContext);
 	return (
 		<>
 			<Header />
@@ -31,10 +30,6 @@ const Menu = ({ routes }) => {
 			</MenuContainer>
 		</>
 	);
-};
-
-Menu.propTypes = {
-	routes: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Menu;
