@@ -10,7 +10,10 @@
 			"title": "new launches"
 		},
 		"button": {
-			"readmore": "Show more"
+			"readmore": {
+				"show": "Show more",
+				"hide": "Hide"
+			}
 		}
 	}
 }

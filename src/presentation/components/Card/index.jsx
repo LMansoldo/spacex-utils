@@ -4,11 +4,7 @@ import SpacesContext from '../../../context';
 
 import {
 	CardWrapper,
-	TextName,
-	TextPlace,
-	TextDate,
-	TextRocket,
-	TextDescription,
+	Text,
 	ShipList,
 	LeftSide,
 	RightSide,
@@ -23,32 +19,32 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 
 	const handleReadMoreBehavior = () => {
 		const renderAditionalFields = () => (
-			<>
-				<TextDescription>{description}</TextDescription>
+			<TransitionKeyframe open>
+				<Text>{description}</Text>
 				<ShipList>{shipList}</ShipList>
-			</>
+			</TransitionKeyframe>
 		);
 
 		if (readMore) return renderAditionalFields();
-		return null;
+		return <TransitionKeyframe open={false} />;
 	};
 
 	return (
 		<CardWrapper>
 			<TextContainer>
 				<LeftSide>
-					<TextName>{name}</TextName>
-					<TextRocket>{rocket}</TextRocket>
-					<TransitionKeyframe>{handleReadMoreBehavior()}</TransitionKeyframe>
+					<Text>{name}</Text>
+					<Text>{rocket}</Text>
+					{handleReadMoreBehavior()}
 				</LeftSide>
 				<RightSide>
-					<TextDate>{date}</TextDate>
-					<TextPlace>{place}</TextPlace>
+					<Text>{date}</Text>
+					<Text>{place}</Text>
 				</RightSide>
 			</TextContainer>
 			<ButtonContainer>
 				<button type="button" onClick={() => setReadMore((e) => !e)}>
-					{t('button.readmore')}
+					{readMore ? t('button.readmore.hide') : t('button.readmore.show')}
 				</button>
 			</ButtonContainer>
 		</CardWrapper>

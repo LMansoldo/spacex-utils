@@ -10,7 +10,10 @@
 			"title": "novos lançamentos"
 		},
 		"button": {
-			"readmore": "Mostrar mais"
+			"readmore": {
+				"show": "Mostrar mais",
+				"hide": "Mostrar menos"
+			}
 		}
 	}
 }
