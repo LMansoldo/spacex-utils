@@ -1,13 +1,17 @@
-import React, { useContext } from 'react';
-import SpaceContext from '../../../context';
+import React from 'react';
+import { Card } from '../../components';
 
-const Launches = () => {
-	const { t } = useContext(SpaceContext);
-	return (
-		<div>
-			<span>{t('launches.title')}</span>
-		</div>
-	);
-};
+const Launches = () => (
+	<div>
+		<Card
+			name="name"
+			rocket="rocket"
+			place="place"
+			date="date"
+			description="description"
+			shipList="shipList"
+		/>
+	</div>
+);
 
 export default Launches;

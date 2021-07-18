@@ -8,6 +8,12 @@
 		},
 		"new-launches": {
 			"title": "novos lançamentos"
+		},
+		"button": {
+			"readmore": {
+				"show": "Mostrar mais",
+				"hide": "Mostrar menos"
+			}
 		}
 	}
 }

@@ -8,6 +8,12 @@
 		},
 		"new-launches": {
 			"title": "new launches"
+		},
+		"button": {
+			"readmore": {
+				"show": "Show more",
+				"hide": "Hide"
+			}
 		}
 	}
 }
