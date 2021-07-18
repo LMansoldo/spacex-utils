@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import SpaceContext from '../../../context';
 
-import { TextField } from '../index';
+import TextField from '../TextField';
 import { Container } from '../../../styles/shared';
 import { HeaderContainer, HeaderBrand, HeaderInputWrapper } from './styled';
 
