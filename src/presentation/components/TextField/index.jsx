@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Container, Input, Label } from './styles';
-import { ErrorMessage } from '~/styles/shared';
+import { ErrorMessage } from '../../../styles/shared';
 
 const TextField = (props) => {
 	const [isFocused, setIsFocused] = useState(false);

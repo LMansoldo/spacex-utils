@@ -1,6 +1,5 @@
-import styled from '@emotion/styled';
-import { css } from '@emotion/core';
-import { colors, theme } from '~/styles/variables';
+import styled from 'styled-components';
+import { colors, theme } from './variables';
 
 export const TitleHome = styled.h2`
 	color: ${colors.white};
@@ -22,23 +21,14 @@ export const BorderBox = styled.div`
 	border-radius: 10px;
 `;
 
-// Site Grid
-export const Section = styled.section`
-	background-color: ${({ color }) => color || theme.background};
-	width: 100%;
-
-	${({ margin }) =>
-		margin &&
-		css`
-			margin: ${margin};
-		`}
-
-	${({ padding }) =>
-		padding &&
-		css`
-			padding: ${padding};
-		`}
+export const ErrorMessage = styled.span`
+	color: ${theme.errorColor};
+	font-size: 16px;
+	margin: 15px 0;
+	justify-self: start;
 `;
+
+// Site Grid
 
 export const Container = styled.div`
 	width: 90%;
