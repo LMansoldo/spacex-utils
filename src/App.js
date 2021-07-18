@@ -1,25 +1,32 @@
 import React, { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Menu } from './presentation/components';
+import Layout from './presentation/components/Layout';
 import ContentProviders from './services/contentProviders';
 
 const App = () => {
 	const AVAILABLE_ROUTES = ContentProviders();
+	const TranslateContext = React.createContext(null);
+	const { t } = useTranslation();
+
 	return (
-		<Router>
-			<Menu routes={AVAILABLE_ROUTES} />
-			<Suspense fallback={<span>loading</span>}>
-				<Switch>
-					{AVAILABLE_ROUTES.map(({ path, component }, index) => (
-						<Route
-							key={`route-${path}-${index}`}
-							path={path}
-							render={component}
-						/>
-					))}
-				</Switch>
-			</Suspense>
-		</Router>
+		<TranslateContext.Provider translate={t}>
+			<Router>
+				<Suspense fallback={<span>loading</span>}>
+					<Layout routes={AVAILABLE_ROUTES}>
+						<Switch>
+							{AVAILABLE_ROUTES.map(({ path, component }, index) => (
+								<Route
+									key={`route-${path}-${index}`}
+									path={path}
+									render={component}
+								/>
+							))}
+						</Switch>
+					</Layout>
+				</Suspense>
+			</Router>
+		</TranslateContext.Provider>
 	);
 };
 
