@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import Button from '../Button';
 import SpacesContext from '../../../context';
 
 import {
@@ -43,9 +44,13 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 				</RightSide>
 			</TextContainer>
 			<ButtonContainer>
-				<button type="button" onClick={() => setReadMore((e) => !e)}>
+				<Button
+					size="medium"
+					color="info"
+					onClick={() => setReadMore((e) => !e)}
+				>
 					{readMore ? t('button.readmore.hide') : t('button.readmore.show')}
-				</button>
+				</Button>
 			</ButtonContainer>
 		</CardWrapper>
 	);
