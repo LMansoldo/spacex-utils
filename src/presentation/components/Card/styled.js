@@ -48,6 +48,7 @@ export const CardWrapper = styled.div`
 	padding: 20px;
 	-webkit-box-shadow: 3px 0px 10px -8px #828282;
 	box-shadow: 3px 0px 10px -8px #828282;
+	background: #fff;
 `;
 
 export const Text = styled.div`
