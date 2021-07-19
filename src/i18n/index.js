@@ -6,7 +6,7 @@ import ENUS from './locales/en-US/translation.json';
 
 const resources = {
 	'pt-BR': PTBR,
-	'en-us': ENUS,
+	'en-US': ENUS,
 };
 
 i18n
