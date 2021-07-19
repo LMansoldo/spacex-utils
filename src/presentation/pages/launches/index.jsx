@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import React, { useState, useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
 import { gql, useQuery } from '@apollo/client';
 import { Card, Button } from '../../components';
 import SpaceContext from '../../../context';
@@ -66,27 +66,15 @@ const Launches = () => {
 	return (
 		<Container>
 			<FilterAndSearch>
-				<Autocomplete
-					freeSolo
-					selectOnFocus
-					id="free-solo-2-demo"
-					disableClearable
-					onOpen={() => {
-						if (data.launches.length <= 1) return setSearchName('');
-					}}
-					options={data.launches.map((option) => option.mission_name)}
-					onChange={(e, v) => setSearchName(v)}
-					renderInput={(params) => (
-						<TextField
-							{...params}
-							style={{ width: 250 }}
-							label="Search input"
-							margin="normal"
-							size="small"
-							variant="outlined"
-							InputProps={{ ...params.InputProps, type: 'search' }}
-						/>
-					)}
+				<TextField
+					style={{ width: 250, background: '#fff' }}
+					label={t('search.label')}
+					margin="normal"
+					onChange={(e) =>
+						setTimeout(() => setSearchName(e.target.value), [2000])
+					}
+					size="small"
+					variant="outlined"
 				/>
 				<Button onClick={() => handleQueryLimit()}>{`${t(
 					'showing-label'

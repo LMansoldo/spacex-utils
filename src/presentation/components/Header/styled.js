@@ -17,6 +17,7 @@ export const HeaderContainer = styled.header`
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 10;
 
 	& .spcx-header-container {
 		display: flex;
