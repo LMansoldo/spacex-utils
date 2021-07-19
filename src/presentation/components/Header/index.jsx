@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { HeaderContainer, HeaderBrand, HeaderInputWrapper } from './styled';
+import { Container } from '../../../styles/shared';
+import { HeaderContainer, HeaderBrand } from './styled';
 
 const Header = () => (
 	<HeaderContainer>
-		<HeaderBrand />
-		<HeaderInputWrapper />
+		<Container className="spcx-header-container">
+			<HeaderBrand>Logo</HeaderBrand>
+		</Container>
 	</HeaderContainer>
 );
-
 export default Header;
