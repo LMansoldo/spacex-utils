@@ -78,13 +78,15 @@ export const ButtonWrapper = styled.button`
 	justify-content: center;
 	align-items: center;
 	border: 0px solid transparent;
-	border-radius: 70px;
+	border-radius: 5px;
 	${(props) => handleColor(props.color)}
 	-webkit-box-shadow: -1px 1px 7px 0px #c7c7c7;
 	box-shadow: -1px 1px 7px 0px #c7c7c7;
 	cursor: pointer;
 	text-transform: lowercase;
-	font-size: 13px;
+	font-size: 14px;
+	font-weight: 600;
 	padding: 0 15px;
+	margin: 0;
 	${(props) => handleSize(props.size)}
 `;

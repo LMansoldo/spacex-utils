@@ -18,6 +18,14 @@
 		"search": {
 			"label": "Search"
 		},
-		"showing-label": "Showing"
+		"showing-label": "Showing",
+		"card": {
+			"name": "Name",
+			"date": "Launched at",
+			"rocket": "Rocket name",
+			"description": "Details",
+			"place": "Launched where",
+			"ships": "Ships"
+		}
 	}
 }
