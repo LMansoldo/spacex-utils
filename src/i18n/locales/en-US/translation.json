@@ -25,7 +25,34 @@
 			"rocket": "Rocket name",
 			"description": "Details",
 			"place": "Launched where",
-			"ships": "Ships"
+			"ships": "Ships",
+			"ship-name": "name",
+			"ship-type": "type"
+		},
+		"rocket-card": {
+			"name": "Name",
+			"stages": "Stages",
+			"status": {
+				"label": "Status",
+				"active": "Active",
+				"inactive": "Inactive"
+			},
+			"height": {
+				"label": "meters",
+				"value": "Height"
+			},
+			"diameter": {
+				"label": "meters",
+				"value": "Diameter"
+			},
+			"charge": {
+				"label": "kg",
+				"value": "Payload Weight"
+			},
+			"description": "Description",
+			"engines": "Engines",
+			"number": "number",
+			"type": "type"
 		}
 	}
 }

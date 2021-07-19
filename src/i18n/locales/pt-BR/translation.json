@@ -25,7 +25,34 @@
 			"rocket": "Nome do Foguete",
 			"description": "Descrição",
 			"place": "Local do Lançamento",
-			"ships": "Naves"
+			"ships": "Naves",
+			"ship-name": "nome",
+			"ship-type": "tipo"
+		},
+		"rocket-card": {
+			"name": "Nome",
+			"stages": "Número de Estágios",
+			"status": {
+				"label": "Status",
+				"active": "Ativo",
+				"inactive": "Inativo"
+			},
+			"height": {
+				"label": "metros",
+				"value": "Altura"
+			},
+			"diameter": {
+				"label": "metros",
+				"value": "Diâmetro"
+			},
+			"charge": {
+				"label": "kg",
+				"value": "Capacidade de Carga"
+			},
+			"description": "Descrição",
+			"engines": "Motores",
+			"number": "quantidade",
+			"type": "tipo"
 		}
 	}
 }
