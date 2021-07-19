@@ -2,8 +2,8 @@
   "files": {
     "static/js/0.7fb0a826.chunk.js": "/spacex-utils/static/js/0.7fb0a826.chunk.js",
     "static/js/0.7fb0a826.chunk.js.map": "/spacex-utils/static/js/0.7fb0a826.chunk.js.map",
-    "main.js": "/spacex-utils/static/js/main.9c79d164.chunk.js",
-    "main.js.map": "/spacex-utils/static/js/main.9c79d164.chunk.js.map",
+    "main.js": "/spacex-utils/static/js/main.f5ccc563.chunk.js",
+    "main.js.map": "/spacex-utils/static/js/main.f5ccc563.chunk.js.map",
     "runtime-main.js": "/spacex-utils/static/js/runtime-main.c1322bc2.js",
     "runtime-main.js.map": "/spacex-utils/static/js/runtime-main.c1322bc2.js.map",
     "static/js/3.98f61117.chunk.js": "/spacex-utils/static/js/3.98f61117.chunk.js",
@@ -21,6 +21,6 @@
   "entrypoints": [
     "static/js/runtime-main.c1322bc2.js",
     "static/js/3.98f61117.chunk.js",
-    "static/js/main.9c79d164.chunk.js"
+    "static/js/main.f5ccc563.chunk.js"
   ]
 }
