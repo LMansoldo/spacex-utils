@@ -1,16 +1,23 @@
+/* eslint-disable no-console */
 import React, { useState, useContext } from 'react';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import { gql, useQuery } from '@apollo/client';
 import { Card, Button } from '../../components';
 import SpaceContext from '../../../context';
+
+import { Container } from '../../../styles/shared';
+import { FilterAndSearch } from '../styled';
 
 const Launches = () => {
 	const { t } = useContext(SpaceContext);
 	const [limitCounter, setLimitCounter] = useState(0);
 	const [limit, setLimit] = useState('10');
+	const [searchName, setSearchName] = useState('');
 
 	const GET_LAUNCHES = gql`
 		query GetLaunchList {
-			launches(order: "desc", sort: "launch_date_utc", limit: ${limit}) {
+			launches(order: "desc", sort: "launch_date_utc", limit: ${limit}, find: {mission_name: "${searchName}"}) {
 				id
 				mission_name
 				launch_date_local
@@ -57,10 +64,34 @@ const Launches = () => {
 	};
 
 	return (
-		<div>
-			<Button onClick={() => handleQueryLimit()}>{`${t(
-				'showing-label'
-			)}: ${limit}`}</Button>
+		<Container>
+			<FilterAndSearch>
+				<Autocomplete
+					freeSolo
+					selectOnFocus
+					id="free-solo-2-demo"
+					disableClearable
+					onOpen={() => {
+						if (data.launches.length <= 1) return setSearchName('');
+					}}
+					options={data.launches.map((option) => option.mission_name)}
+					onChange={(e, v) => setSearchName(v)}
+					renderInput={(params) => (
+						<TextField
+							{...params}
+							style={{ width: 250 }}
+							label="Search input"
+							margin="normal"
+							size="small"
+							variant="outlined"
+							InputProps={{ ...params.InputProps, type: 'search' }}
+						/>
+					)}
+				/>
+				<Button onClick={() => handleQueryLimit()}>{`${t(
+					'showing-label'
+				)}: ${limit}`}</Button>
+			</FilterAndSearch>
 			{data.launches &&
 				data.launches.map((launch) => (
 					<Card
@@ -73,7 +104,7 @@ const Launches = () => {
 						shipList={launch.ships}
 					/>
 				))}
-		</div>
+		</Container>
 	);
 };
 

@@ -33,10 +33,19 @@ export const ErrorMessage = styled.span`
 export const Container = styled.div`
 	width: 90%;
 	margin: 0 auto;
+	padding: 0 15px;
 	max-width: 1200px;
 
-	@media (min-width: 1368px) {
+	@media (max-width: 1368px) {
 		max-width: 1600px;
+	}
+
+	@media (max-width: 768px) {
+		max-width: 720px;
+	}
+
+	@media (max-width: 576px) {
+		max-width: 540px;
 	}
 `;
 

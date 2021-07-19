@@ -18,8 +18,20 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 	const [readMore, setReadMore] = useState(false);
 	const { t } = useContext(SpacesContext);
 
-	// eslint-disable-next-line no-console
-	console.log(shipList);
+	const formatDateString = (dateString) => {
+		const formattedDate = new Date(dateString).toLocaleDateString(
+			navigator.language
+		);
+		const hours = new Date(dateString).getHours();
+		const minutes = new Date(dateString).getMinutes();
+
+		return `${formattedDate} ${hours}:${minutes}`;
+	};
+
+	const charsLimiter = (str) => {
+		if (!str) return '';
+		return `${str.substr(0, 139)}...`;
+	};
 
 	const handleReadMoreBehavior = () => {
 		const renderShipList = () => {
@@ -40,7 +52,11 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		);
 
 		if (readMore) return renderAditionalFields();
-		return <TransitionKeyframe open={false} />;
+		return (
+			<TransitionKeyframe open={false}>
+				{charsLimiter(description)}
+			</TransitionKeyframe>
+		);
 	};
 
 	return (
@@ -52,7 +68,7 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 					{handleReadMoreBehavior()}
 				</LeftSide>
 				<RightSide>
-					<Text>{date}</Text>
+					<Text>{formatDateString(date)}</Text>
 					<Text>{place}</Text>
 				</RightSide>
 			</TextContainer>
