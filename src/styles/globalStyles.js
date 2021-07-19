@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0 0 30px 0;
     padding: 0;
-    background: #f1f1f1;
+    background: #fdfdfd;
     font-family: 'Maven Pro', sans-serif;
   }
 `;

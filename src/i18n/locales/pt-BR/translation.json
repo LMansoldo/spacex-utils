@@ -18,6 +18,14 @@
 		"search": {
 			"label": "Buscar"
 		},
-		"showing-label": "Exibindo"
+		"showing-label": "Exibindo",
+		"card": {
+			"name": "Nome",
+			"date": "Data de Lançamento",
+			"rocket": "Nome do Foguete",
+			"description": "Descrição",
+			"place": "Local do Lançamento",
+			"ships": "Naves"
+		}
 	}
 }

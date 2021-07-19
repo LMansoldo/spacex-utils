@@ -9,6 +9,7 @@ import {
 	ShipList,
 	LeftSide,
 	RightSide,
+	Label,
 	TransitionKeyframe,
 	ButtonContainer,
 	TextContainer,
@@ -38,23 +39,30 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 			if (shipList)
 				return shipList.map((ship) => (
 					<div key={ship.id}>
-						<span>{ship.name}</span>
-						<span>{ship.type}</span>
+						<Text>{ship.name}</Text>
+						<Text>{ship.type}</Text>
 					</div>
 				));
 		};
 
 		const renderAditionalFields = () => (
 			<TransitionKeyframe open>
+				<Label>{t('card.description')}</Label>
 				<Text>{description}</Text>
-				<ShipList>{renderShipList()}</ShipList>
+				<ShipList>
+					<Label>{t('card.ships')}</Label>
+					{renderShipList()}
+				</ShipList>
 			</TransitionKeyframe>
 		);
 
 		if (readMore) return renderAditionalFields();
 		return (
 			<TransitionKeyframe open={false}>
-				{charsLimiter(description)}
+				<Text>
+					<Label>{t('card.description')}</Label>
+					{charsLimiter(description)}
+				</Text>
 			</TransitionKeyframe>
 		);
 	};
@@ -63,13 +71,25 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		<CardWrapper>
 			<TextContainer>
 				<LeftSide>
-					<Text>{name}</Text>
-					<Text>{rocket}</Text>
+					<Text>
+						<Label>{t('card.name')}</Label>
+						{name}
+					</Text>
+					<Text>
+						<Label>{t('card.rocket')}</Label>
+						{rocket}
+					</Text>
 					{handleReadMoreBehavior()}
 				</LeftSide>
 				<RightSide>
-					<Text>{formatDateString(date)}</Text>
-					<Text>{place}</Text>
+					<Text>
+						<Label>{t('card.date')}</Label>
+						{formatDateString(date)}
+					</Text>
+					<Text>
+						<Label>{t('card.place')}</Label>
+						{place}
+					</Text>
 				</RightSide>
 			</TextContainer>
 			<ButtonContainer>

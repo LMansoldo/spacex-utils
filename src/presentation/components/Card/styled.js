@@ -49,10 +49,20 @@ export const CardWrapper = styled.div`
 	-webkit-box-shadow: 3px 0px 10px -8px #828282;
 	box-shadow: 3px 0px 10px -8px #828282;
 	background: #fff;
+	margin: 40px 0;
 `;
 
 export const Text = styled.div`
 	margin: 15px 0;
+	max-width: 400px;
+	font-weight: 200;
+	color: #5f5f5f;
+`;
+
+export const Label = styled.span`
+	margin-right: 10px;
+	font-weight: 600;
+	color: #5f5f5f;
 `;
 
 export const ShipList = styled.div``;

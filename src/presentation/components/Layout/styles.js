@@ -5,7 +5,6 @@ import mediaQuery from '../../../styles/mediaQuery';
 export const LayoutWrapper = styled.main`
 	padding-top: 90px;
 	padding-left: 220px;
-	background: #f1f1f1;
 `;
 
 export const Dashboard = styled.div`
