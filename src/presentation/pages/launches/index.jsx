@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { gql, useQuery } from '@apollo/client';
-import { Card } from '../../components';
+import { Card, Button } from '../../components';
+import SpaceContext from '../../../context';
 
 const Launches = () => {
+	const { t } = useContext(SpaceContext);
+	const [limitCounter, setLimitCounter] = useState(0);
+	const [limit, setLimit] = useState('10');
+
 	const GET_LAUNCHES = gql`
 		query GetLaunchList {
-			launches(limit: 10) {
+			launches(order: "desc", sort: "launch_date_utc", limit: ${limit}) {
 				id
 				mission_name
 				launch_date_local
@@ -34,8 +39,28 @@ const Launches = () => {
 	if (loading) return <span>loading...</span>;
 	if (error || !data) return <p>ERROR</p>;
 
+	const handleQueryLimit = () => {
+		setLimitCounter(limitCounter + 1);
+
+		if (limitCounter > 1) {
+			setLimitCounter(0);
+		}
+
+		switch (limitCounter) {
+			case 1:
+				return setLimit('25');
+			case 2:
+				return setLimit('50');
+			default:
+				return setLimit('10');
+		}
+	};
+
 	return (
 		<div>
+			<Button onClick={() => handleQueryLimit()}>{`${t(
+				'showing-label'
+			)}: ${limit}`}</Button>
 			{data.launches &&
 				data.launches.map((launch) => (
 					<Card

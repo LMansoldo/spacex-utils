@@ -17,6 +17,7 @@
 		},
 		"search": {
 			"label": "Search"
-		}
+		},
+		"showing-label": "Showing"
 	}
 }
