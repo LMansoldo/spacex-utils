@@ -4,9 +4,9 @@ import { theme } from '../styles/variables';
 
 const Launches = React.lazy(() => import('../presentation/pages/launches'));
 const Rockets = React.lazy(() => import('../presentation/pages/rockets'));
-const NewLaunches = React.lazy(() =>
-	import('../presentation/pages/new-launches')
-);
+// const NewLaunches = React.lazy(() =>
+// 	import('../presentation/pages/new-launches')
+// );
 
 const ContentProviders = () => [
 	{
@@ -25,14 +25,14 @@ const ContentProviders = () => [
 		component: () => <Rockets />,
 		anchors: [],
 	},
-	{
-		title: 'Novos Lançamentos',
-		prefixUrlMatch: 'new-launches',
-		background: theme.googleColor,
-		path: '/new-launches',
-		component: () => <NewLaunches />,
-		anchors: [],
-	},
+	// {
+	// 	title: 'Novos Lançamentos',
+	// 	prefixUrlMatch: 'new-launches',
+	// 	background: theme.googleColor,
+	// 	path: '/new-launches',
+	// 	component: () => <NewLaunches />,
+	// 	anchors: [],
+	// },
 ];
 
 export default ContentProviders;

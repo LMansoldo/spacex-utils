@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
 import React, { useState, useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import { gql, useQuery } from '@apollo/client';
 import { Card, Button } from '../../components';
 import SpaceContext from '../../../context';
@@ -22,10 +21,6 @@ const Launches = () => {
 				mission_name
 				launch_date_local
 				details
-				links {
-					article_link
-					video_link
-				}
 				launch_site {
 					site_name_long
 				}
@@ -43,7 +38,12 @@ const Launches = () => {
 
 	const { data, loading, error } = useQuery(GET_LAUNCHES);
 
-	if (loading) return <span>loading...</span>;
+	if (loading)
+		return (
+			<div>
+				<LinearProgress color="secondary" />
+			</div>
+		);
 	if (error || !data) return <p>ERROR</p>;
 
 	const handleQueryLimit = () => {

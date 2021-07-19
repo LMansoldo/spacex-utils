@@ -1,6 +1,12 @@
 import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route,
+	Redirect,
+} from 'react-router-dom';
 import Layout from './presentation/components/Layout';
 import ContentProviders from './services/contentProviders';
 import SpaceContext from './context';
@@ -12,9 +18,10 @@ const App = () => {
 	return (
 		<SpaceContext.Provider value={{ t, routes: AVAILABLE_ROUTES }}>
 			<Router>
-				<Suspense fallback={<span>loading</span>}>
+				<Suspense fallback={<LinearProgress color="secondary" />}>
 					<Layout routes={AVAILABLE_ROUTES}>
 						<Switch>
+							<Redirect from="/spacex-utils" to="/launches" />
 							{AVAILABLE_ROUTES.map(({ path, component }, index) => (
 								<Route
 									key={`route-${path}-${index}`}
