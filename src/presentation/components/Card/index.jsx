@@ -39,7 +39,7 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		const renderShipList = () => {
 			if (shipList)
 				return shipList.map((ship) => (
-					<Ships key={ship.id}>
+					<Ships key={ship.id} data-testid="spcx-shiplist">
 						<Text>
 							<Label>{t('card.ship-name')}: </Label>
 							{ship.name}
