@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { screen, render } from '../../../tests';
+import { screen, render, userEvent } from '../../../tests';
 import i18n from '../../../tests/translations';
 import ContextTest from '../../../tests/contextTest';
 import Card from './index';
@@ -56,5 +56,25 @@ describe('Card', () => {
 		);
 
 		expect(screen.queryByTestId('limited-description')).toBeInTheDocument();
+	});
+
+	it("Should render full description & ships", () => {
+		render(
+			<ContextTest>
+				<Card
+					name={name}
+					rocket={rocket}
+					place={place}
+					date={date}
+					description={description}
+					shipList={shipList}
+				/>
+			</ContextTest>
+		);
+
+		const showMoreButton = screen.getByRole('button');
+		userEvent.click(showMoreButton);
+
+		expect(screen.queryByTestId('description')).toBeInTheDocument();
 	});
 });
