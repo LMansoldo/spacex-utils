@@ -55,6 +55,6 @@ describe('Card', () => {
 			</ContextTest>
 		);
 
-		expect(screen.queryByTestId('limited-description')).not.toBeInTheDocument();
+		expect(screen.queryByTestId('limited-description')).toBeInTheDocument();
 	});
 });
