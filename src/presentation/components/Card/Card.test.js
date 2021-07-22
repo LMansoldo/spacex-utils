@@ -1,5 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { screen, render } from '../../../tests';
+import i18n from '../../../tests/translations';
+import ContextTest from '../../../tests/contextTest';
 import Card from './index';
 
 const name = 'Mission test';
@@ -23,16 +26,18 @@ const shipList = [
 describe('Card', () => {
 	it('Should start closed', () => {
 		render(
-			<Card
-				name={name}
-				rocket={rocket}
-				place={place}
-				date={date}
-				description={description}
-				shipList={shipList}
-			/>
+			<ContextTest>
+				<Card
+					name={name}
+					rocket={rocket}
+					place={place}
+					date={date}
+					description={description}
+					shipList={shipList}
+				/>
+			</ContextTest>
 		);
 
-		expect(screen.getByTestId(/spcx-shiplist/i)).toBeNull();
+		expect(screen.queryByTestId('description')).not.toBeInTheDocument();
 	});
 });

@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { withTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import SpacesContext from '../../../context';
@@ -39,7 +40,7 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		const renderShipList = () => {
 			if (shipList)
 				return shipList.map((ship) => (
-					<Ships key={ship.id} data-testid="spcx-shiplist">
+					<Ships key={ship.id}>
 						<Text>
 							<Label>{t('card.ship-name')}: </Label>
 							{ship.name}
@@ -55,7 +56,7 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		const renderAditionalFields = () => (
 			<TransitionKeyframe open>
 				<Label>{t('card.description')}</Label>
-				<Text>{description}</Text>
+				<Text data-testid="description">{description}</Text>
 				<ShipList>
 					<Label>{t('card.ships')}</Label>
 					{renderShipList()}
@@ -121,4 +122,4 @@ Card.propTypes = {
 	shipList: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default Card;
+export default withTranslation('ns')(Card);
