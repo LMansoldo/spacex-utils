@@ -40,4 +40,21 @@ describe('Card', () => {
 
 		expect(screen.queryByTestId('description')).not.toBeInTheDocument();
 	});
+
+	it('Should show limited description', () => {
+		render(
+			<ContextTest>
+				<Card
+					name={name}
+					rocket={rocket}
+					place={place}
+					date={date}
+					description={description}
+					shipList={shipList}
+				/>
+			</ContextTest>
+		);
+
+		expect(screen.queryByTestId('limited-description')).not.toBeInTheDocument();
+	});
 });

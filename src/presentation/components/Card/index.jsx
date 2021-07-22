@@ -68,7 +68,9 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		return (
 			<TransitionKeyframe open={false}>
 				<Text>
-					<Label>{t('card.description')}</Label>
+					<Label data-testid="limited-description">
+						{t('card.description')}
+					</Label>
 					{charsLimiter(description)}
 				</Text>
 			</TransitionKeyframe>
