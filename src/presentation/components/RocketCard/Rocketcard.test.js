@@ -1,22 +1,46 @@
+/* eslint-disable camelcase */
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { screen, render, userEvent } from '../../../tests';
-import i18n from '../../../tests/translations';
 import ContextTest from '../../../tests/contextTest';
-import Card from './index';
+import RocketCard from './index';
 
-const name = 'Mission test';
-const rocket = 'King Crimson';
-const place = 'Los Angeles';
-const date = new Date().toISOString();
-const description =
-	'Cat s foot iron claw, Neuro-surgeons scream for more, At paranoia s poison door, Twenty first century schizoid man, Blood rack barbed wire, Politicians funeral pyre, Innocents raped with napalm fire, Twenty first century schizoid man';
-const shipList = [
-	{ name: 'Tree', type: 'cargo' },
-	{ name: 'Perfect', type: 'cargo' },
-	{ name: 'Pair', type: 'cargo' },
-];
-
+const {
+	name,
+	payload_weights,
+	description,
+	active,
+	diameter,
+	engines,
+	height,
+	stages,
+} = {
+	name: 'Falcon 9',
+	payload_weights: [
+		{
+			kg: 22800,
+		},
+		{
+			kg: 8300,
+		},
+		{
+			kg: 4020,
+		},
+	],
+	description:
+		'Falcon 9 is a two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of satellites and the Dragon spacecraft into orbit.',
+	active: true,
+	diameter: {
+		meters: 3.7,
+	},
+	engines: {
+		type: 'merlin',
+		number: 9,
+	},
+	height: {
+		meters: 70,
+	},
+	stages: 2,
+};
 /*
 		1 - Deve renderizar fechado
 		2 - Deve exibir descrição limitada a 140 caracteres
@@ -27,13 +51,15 @@ describe('Card', () => {
 	it('Should start closed', () => {
 		render(
 			<ContextTest>
-				<Card
+				<RocketCard
 					name={name}
-					rocket={rocket}
-					place={place}
-					date={date}
+					charge={payload_weights}
+					status={active}
+					diameter={diameter}
 					description={description}
-					shipList={shipList}
+					engines={engines}
+					height={height}
+					stages={stages}
 				/>
 			</ContextTest>
 		);
@@ -44,13 +70,15 @@ describe('Card', () => {
 	it('Should show limited description', () => {
 		render(
 			<ContextTest>
-				<Card
+				<RocketCard
 					name={name}
-					rocket={rocket}
-					place={place}
-					date={date}
+					charge={payload_weights}
+					status={active}
+					diameter={diameter}
 					description={description}
-					shipList={shipList}
+					engines={engines}
+					height={height}
+					stages={stages}
 				/>
 			</ContextTest>
 		);
@@ -61,13 +89,15 @@ describe('Card', () => {
 	it('Should render full description & ships', () => {
 		render(
 			<ContextTest>
-				<Card
+				<RocketCard
 					name={name}
-					rocket={rocket}
-					place={place}
-					date={date}
+					charge={payload_weights}
+					status={active}
+					diameter={diameter}
 					description={description}
-					shipList={shipList}
+					engines={engines}
+					height={height}
+					stages={stages}
 				/>
 			</ContextTest>
 		);
