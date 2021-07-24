@@ -53,10 +53,10 @@ const RocketCard = ({
 
 		const renderAditionalFields = () => (
 			<TransitionKeyframe open>
-				<Label>{t("rocket-card.description")}</Label>
+				<Label>{t('rocket-card.description')}</Label>
 				<Text data-testid="description">{description}</Text>
 				<ShipList>
-					<Label>{t("rocket-card.engines")}</Label>
+					<Label>{t('rocket-card.engines')}</Label>
 					{renderShipList()}
 				</ShipList>
 			</TransitionKeyframe>
@@ -66,7 +66,7 @@ const RocketCard = ({
 		return (
 			<TransitionKeyframe open={false}>
 				<Text data-testid="limited-description">
-					<Label>{t("rocket-card.description")}</Label>
+					<Label>{t('rocket-card.description')}</Label>
 					{charsLimiter(description)}
 				</Text>
 			</TransitionKeyframe>
