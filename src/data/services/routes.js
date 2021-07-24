@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import { theme } from '../styles/variables';
+import { theme } from '../../styles/variables';
 
-const Launches = React.lazy(() => import('../presentation/pages/launches'));
-const Rockets = React.lazy(() => import('../presentation/pages/rockets'));
+const Launches = React.lazy(() => import('../../presentation/pages/launches'));
+const Rockets = React.lazy(() => import('../../presentation/pages/rockets'));
 // const NewLaunches = React.lazy(() =>
 // 	import('../presentation/pages/new-launches')
 // );
