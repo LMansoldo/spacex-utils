@@ -1,7 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { screen, render, userEvent } from '../../../tests';
-import i18n from '../../../tests/translations';
 import ContextTest from '../../../tests/contextTest';
 import Card from './index';
 

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import Button from '../Button';
+import SpacesContext from '../../../context';
 
 import { FilterAndSearch } from './styled';
 
-const Filter = ({ limit, setLimit, setSearch, t }) => {
+const Filter = ({ limit, setLimit, setSearch }) => {
+	const { t } = useContext(SpacesContext);
+
 	const handleQueryLimit = () => {
 		setLimit(limit + 1);
 
@@ -44,8 +47,6 @@ Filter.propTypes = {
 	limit: PropTypes.func.isRequired,
 	setLimit: PropTypes.func.isRequired,
 	setSearch: PropTypes.func.isRequired,
-	// eslint-disable-next-line react/forbid-prop-types
-	t: PropTypes.any.isRequired,
 };
 
 export default Filter;
