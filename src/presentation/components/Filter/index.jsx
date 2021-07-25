@@ -45,7 +45,7 @@ const Filter = ({ limit, setLimit, setSearch }) => {
 };
 
 Filter.propTypes = {
-	limit: PropTypes.func.isRequired,
+	limit: PropTypes.string.isRequired,
 	setLimit: PropTypes.func.isRequired,
 	setSearch: PropTypes.func.isRequired,
 };

@@ -14,7 +14,7 @@ const Layout = ({ routes, children }) => (
 
 Layout.propTypes = {
 	children: PropTypes.node.isRequired,
-	routes: PropTypes.arrayOf(PropTypes.objects).isRequired,
+	routes: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 };
 
 export default Layout;

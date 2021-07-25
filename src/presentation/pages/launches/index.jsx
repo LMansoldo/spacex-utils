@@ -40,9 +40,9 @@ const Launches = () => {
 		<Container>
 			<Filter limit={limit} setLimit={setLimit} setSearch={setSearchName} />
 			{data.launches &&
-				data.launches.map((launch) => (
+				data.launches.map((launch, index) => (
 					<Card
-						key={`spcx-launch-${launch.id}`}
+						key={`spcx-launch-${launch.id}-${index}`}
 						name={launch.mission_name}
 						rocket={launch.rocket.rocket_name}
 						place={launch.launch_site.site_name_long}

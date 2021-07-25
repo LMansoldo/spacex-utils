@@ -85,7 +85,6 @@ export const ButtonWrapper = styled.button`
 	cursor: pointer;
 	text-transform: lowercase;
 	font-size: 14px;
-	font-weight: 600;
 	padding: 0 15px;
 	margin: 0;
 	${(props) => handleSize(props.size)}
