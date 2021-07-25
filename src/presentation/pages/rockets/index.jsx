@@ -40,12 +40,7 @@ const Rockets = () => {
 
 	const { data, loading, error } = useQuery(GET_ROCKETS);
 
-	if (loading)
-		return (
-			<div>
-				<LinearProgress color="secondary" />
-			</div>
-		);
+	if (loading) return <LinearProgress color="secondary" />;
 	if (error || !data) return <p>ERROR</p>;
 
 	const handleCards = () => {

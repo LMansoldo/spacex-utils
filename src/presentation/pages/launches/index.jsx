@@ -8,8 +8,7 @@ import { Container } from '../../../styles/shared';
 const Launches = () => {
 	const [limit, setLimit] = useState('10');
 	const [searchName, setSearchName] = useState('');
-	// eslint-disable-next-line no-console
-	console.log(limit);
+
 	const GET_LAUNCHES = gql`
 		query GetLaunchList {
 			launches(order: "desc", sort: "launch_date_utc", limit: ${limit}, find: {mission_name: "${searchName}"}) {
@@ -34,12 +33,7 @@ const Launches = () => {
 
 	const { data, loading, error } = useQuery(GET_LAUNCHES);
 
-	if (loading)
-		return (
-			<div>
-				<LinearProgress color="secondary" />
-			</div>
-		);
+	if (loading) return <LinearProgress color="secondary" />;
 	if (error || !data) return <p>ERROR</p>;
 
 	return (
