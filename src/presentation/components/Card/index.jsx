@@ -55,7 +55,7 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		const renderAditionalFields = () => (
 			<TransitionKeyframe open>
 				<Label>{t('card.description')}</Label>
-				<Text>{description}</Text>
+				<Text data-testid="description">{description}</Text>
 				<ShipList>
 					<Label>{t('card.ships')}</Label>
 					{renderShipList()}
@@ -66,7 +66,7 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 		if (readMore) return renderAditionalFields();
 		return (
 			<TransitionKeyframe open={false}>
-				<Text>
+				<Text data-testid="limited-description">
 					<Label>{t('card.description')}</Label>
 					{charsLimiter(description)}
 				</Text>

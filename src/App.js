@@ -8,7 +8,7 @@ import {
 	Redirect,
 } from 'react-router-dom';
 import Layout from './presentation/components/Layout';
-import ContentProviders from './services/contentProviders';
+import ContentProviders from './data/services/routes';
 import SpaceContext from './context';
 
 const App = () => {
