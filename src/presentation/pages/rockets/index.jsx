@@ -49,9 +49,9 @@ const Rockets = () => {
 		const rocketData = mappedData.map((item) => item.rocket);
 		const rockets = rocketData.map((r) => r.rocket);
 		const mappedRockets = rockets.map((rocket) => rocket);
-		return mappedRockets.map((rocket) => (
+		return mappedRockets.map((rocket, index) => (
 			<RocketCard
-				key={`spcx-launch-${rocket.id}`}
+				key={`spcx-launch-${rocket.id}-${index}`}
 				name={rocket.name}
 				status={rocket.active}
 				diameter={rocket.diameter.meters}

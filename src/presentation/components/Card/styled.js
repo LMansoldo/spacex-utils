@@ -55,7 +55,7 @@ export const CardWrapper = styled.div`
 export const Text = styled.div`
 	margin: 15px 0;
 	max-width: 400px;
-	font-weight: 200;
+	font-weight: 300;
 	color: #5f5f5f;
 `;
 
