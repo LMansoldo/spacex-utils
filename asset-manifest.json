@@ -1,26 +1,26 @@
 {
   "files": {
-    "static/js/0.7fb0a826.chunk.js": "/spacex-utils/static/js/0.7fb0a826.chunk.js",
-    "static/js/0.7fb0a826.chunk.js.map": "/spacex-utils/static/js/0.7fb0a826.chunk.js.map",
-    "main.js": "/spacex-utils/static/js/main.f5ccc563.chunk.js",
-    "main.js.map": "/spacex-utils/static/js/main.f5ccc563.chunk.js.map",
-    "runtime-main.js": "/spacex-utils/static/js/runtime-main.c1322bc2.js",
-    "runtime-main.js.map": "/spacex-utils/static/js/runtime-main.c1322bc2.js.map",
-    "static/js/3.98f61117.chunk.js": "/spacex-utils/static/js/3.98f61117.chunk.js",
-    "static/js/3.98f61117.chunk.js.map": "/spacex-utils/static/js/3.98f61117.chunk.js.map",
-    "static/js/4.c4b0777a.chunk.js": "/spacex-utils/static/js/4.c4b0777a.chunk.js",
-    "static/js/4.c4b0777a.chunk.js.map": "/spacex-utils/static/js/4.c4b0777a.chunk.js.map",
-    "static/js/5.6177b973.chunk.js": "/spacex-utils/static/js/5.6177b973.chunk.js",
-    "static/js/5.6177b973.chunk.js.map": "/spacex-utils/static/js/5.6177b973.chunk.js.map",
-    "static/js/6.8806be19.chunk.js": "/spacex-utils/static/js/6.8806be19.chunk.js",
-    "static/js/6.8806be19.chunk.js.map": "/spacex-utils/static/js/6.8806be19.chunk.js.map",
+    "static/js/0.5f2a22d5.chunk.js": "/spacex-utils/static/js/0.5f2a22d5.chunk.js",
+    "static/js/0.5f2a22d5.chunk.js.map": "/spacex-utils/static/js/0.5f2a22d5.chunk.js.map",
+    "main.js": "/spacex-utils/static/js/main.a17bd7fb.chunk.js",
+    "main.js.map": "/spacex-utils/static/js/main.a17bd7fb.chunk.js.map",
+    "runtime-main.js": "/spacex-utils/static/js/runtime-main.b2a78e7f.js",
+    "runtime-main.js.map": "/spacex-utils/static/js/runtime-main.b2a78e7f.js.map",
+    "static/js/3.7de945f1.chunk.js": "/spacex-utils/static/js/3.7de945f1.chunk.js",
+    "static/js/3.7de945f1.chunk.js.map": "/spacex-utils/static/js/3.7de945f1.chunk.js.map",
+    "static/js/4.5cf87688.chunk.js": "/spacex-utils/static/js/4.5cf87688.chunk.js",
+    "static/js/4.5cf87688.chunk.js.map": "/spacex-utils/static/js/4.5cf87688.chunk.js.map",
+    "static/js/5.723ccf27.chunk.js": "/spacex-utils/static/js/5.723ccf27.chunk.js",
+    "static/js/5.723ccf27.chunk.js.map": "/spacex-utils/static/js/5.723ccf27.chunk.js.map",
+    "static/js/6.52bc3825.chunk.js": "/spacex-utils/static/js/6.52bc3825.chunk.js",
+    "static/js/6.52bc3825.chunk.js.map": "/spacex-utils/static/js/6.52bc3825.chunk.js.map",
     "index.html": "/spacex-utils/index.html",
-    "static/js/3.98f61117.chunk.js.LICENSE.txt": "/spacex-utils/static/js/3.98f61117.chunk.js.LICENSE.txt",
+    "static/js/3.7de945f1.chunk.js.LICENSE.txt": "/spacex-utils/static/js/3.7de945f1.chunk.js.LICENSE.txt",
     "static/media/getFetch.cjs": "/spacex-utils/static/media/getFetch.582d29c4.cjs"
   },
   "entrypoints": [
-    "static/js/runtime-main.c1322bc2.js",
-    "static/js/3.98f61117.chunk.js",
-    "static/js/main.f5ccc563.chunk.js"
+    "static/js/runtime-main.b2a78e7f.js",
+    "static/js/3.7de945f1.chunk.js",
+    "static/js/main.a17bd7fb.chunk.js"
   ]
 }
