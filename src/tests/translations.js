@@ -9,7 +9,10 @@ i18n.use(initReactI18next).init({
 	// have a common namespace used around the full app
 
 	debug: false,
-
+	react: {
+		useSuspense: false,
+	},
+	initImmediate: false,
 	interpolation: {
 		escapeValue: false, // not needed for react!!
 	},
