@@ -38,8 +38,8 @@ const Card = ({ name, rocket, place, date, description, shipList }) => {
 	const handleReadMoreBehavior = () => {
 		const renderShipList = () => {
 			if (shipList)
-				return shipList.map((ship) => (
-					<Ships key={ship.id}>
+				return shipList.map((ship, index) => (
+					<Ships key={`${ship.id}-${index}`}>
 						<Text>
 							<Label>{t('card.ship-name')}: </Label>
 							{ship.name}
