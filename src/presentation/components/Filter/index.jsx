@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import Button from '../Button';
@@ -7,16 +7,17 @@ import SpacesContext from '../../../context';
 import { FilterAndSearch } from './styled';
 
 const Filter = ({ limit, setLimit, setSearch }) => {
+	const [limitCounter, setLimitCounter] = useState(0);
 	const { t } = useContext(SpacesContext);
 
 	const handleQueryLimit = () => {
-		setLimit(limit + 1);
+		setLimitCounter(limitCounter + 1);
 
-		if (limit > 1) {
-			setLimit(0);
+		if (limitCounter > 1) {
+			setLimitCounter(0);
 		}
 
-		switch (limit) {
+		switch (limitCounter) {
 			case 1:
 				return setLimit('25');
 			case 2:
