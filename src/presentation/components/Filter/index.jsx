@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import Button from '../Button';
@@ -6,8 +6,13 @@ import SpacesContext from '../../../context';
 
 import { FilterAndSearch } from './styled';
 
-const Filter = ({ limit, setLimit, setSearch }) => {
-	const [limitCounter, setLimitCounter] = useState(0);
+const Filter = ({
+	limit,
+	setLimit,
+	setSearch,
+	setLimitCounter,
+	limitCounter,
+}) => {
 	const { t } = useContext(SpacesContext);
 
 	const handleQueryLimit = () => {
@@ -18,6 +23,8 @@ const Filter = ({ limit, setLimit, setSearch }) => {
 		}
 
 		switch (limitCounter) {
+			case 0:
+				return setLimit('10');
 			case 1:
 				return setLimit('25');
 			case 2:
@@ -26,6 +33,13 @@ const Filter = ({ limit, setLimit, setSearch }) => {
 				return setLimit('10');
 		}
 	};
+
+	useEffect(() => {
+		// eslint-disable-next-line no-console
+		console.log(limitCounter);
+		// eslint-disable-next-line no-console
+		console.log(limit);
+	}, []);
 
 	return (
 		<FilterAndSearch>
@@ -48,6 +62,8 @@ Filter.propTypes = {
 	limit: PropTypes.string.isRequired,
 	setLimit: PropTypes.func.isRequired,
 	setSearch: PropTypes.func.isRequired,
+	setLimitCounter: PropTypes.func.isRequired,
+	limitCounter: PropTypes.number.isRequired,
 };
 
 export default Filter;

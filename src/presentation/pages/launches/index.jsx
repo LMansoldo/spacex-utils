@@ -6,6 +6,7 @@ import { Card, Filter } from '../../components';
 import { Container } from '../../../styles/shared';
 
 const Launches = () => {
+	const [limitCounter, setLimitCounter] = useState(1);
 	const [limit, setLimit] = useState('10');
 	const [searchName, setSearchName] = useState('');
 
@@ -38,7 +39,13 @@ const Launches = () => {
 
 	return (
 		<Container>
-			<Filter limit={limit} setLimit={setLimit} setSearch={setSearchName} />
+			<Filter
+				limit={limit}
+				setLimit={setLimit}
+				setSearch={setSearchName}
+				setLimitCounter={setLimitCounter}
+				limitCounter={limitCounter}
+			/>
 			{data.launches &&
 				data.launches.map((launch, index) => (
 					<Card
