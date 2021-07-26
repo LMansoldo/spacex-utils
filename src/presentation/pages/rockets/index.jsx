@@ -6,6 +6,7 @@ import { RocketCard, Filter } from '../../components';
 import { Container } from '../../../styles/shared';
 
 const Rockets = () => {
+	const [limitCounter, setLimitCounter] = useState(1);
 	const [limit, setLimit] = useState('10');
 	const [searchName, setSearchName] = useState('');
 	const GET_ROCKETS = gql`
@@ -66,7 +67,14 @@ const Rockets = () => {
 
 	return (
 		<Container>
-			<Filter limit={limit} setLimit={setLimit} setSearch={setSearchName} />
+			<Filter
+				limit={limit}
+				setLimit={setLimit}
+				setSearch={setSearchName}
+				setLimitCounter={setLimitCounter}
+				limitCounter={limitCounter}
+				searchName={searchName}
+			/>
 			{handleCards()}
 		</Container>
 	);
