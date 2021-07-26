@@ -73,6 +73,7 @@ const Rockets = () => {
 				setSearch={setSearchName}
 				setLimitCounter={setLimitCounter}
 				limitCounter={limitCounter}
+				searchName={searchName}
 			/>
 			{handleCards()}
 		</Container>

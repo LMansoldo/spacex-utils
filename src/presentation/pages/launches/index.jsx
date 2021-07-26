@@ -45,6 +45,7 @@ const Launches = () => {
 				setSearch={setSearchName}
 				setLimitCounter={setLimitCounter}
 				limitCounter={limitCounter}
+				searchName={searchName}
 			/>
 			{data.launches &&
 				data.launches.map((launch, index) => (

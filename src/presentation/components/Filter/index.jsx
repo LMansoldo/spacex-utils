@@ -11,6 +11,7 @@ const Filter = ({
 	setLimit,
 	setSearch,
 	setLimitCounter,
+	searchName,
 	limitCounter,
 }) => {
 	const { t } = useContext(SpacesContext);
@@ -34,12 +35,15 @@ const Filter = ({
 		}
 	};
 
+	const handleSearchName = (e) => {
+		if (e.code === 'Enter') {
+			setSearch(e.target.value);
+		}
+	};
+
 	useEffect(() => {
-		// eslint-disable-next-line no-console
-		console.log(limitCounter);
-		// eslint-disable-next-line no-console
-		console.log(limit);
-	}, []);
+		if (!searchName) return setSearch(' ');
+	}, [searchName]);
 
 	return (
 		<FilterAndSearch>
@@ -47,7 +51,7 @@ const Filter = ({
 				style={{ width: 250, background: '#fff' }}
 				label={t('search.label')}
 				margin="normal"
-				onChange={(e) => setTimeout(() => setSearch(e.target.value), [2000])}
+				onKeyPress={(e) => handleSearchName(e)}
 				size="small"
 				variant="outlined"
 			/>
@@ -64,6 +68,7 @@ Filter.propTypes = {
 	setSearch: PropTypes.func.isRequired,
 	setLimitCounter: PropTypes.func.isRequired,
 	limitCounter: PropTypes.number.isRequired,
+	searchName: PropTypes.string.isRequired,
 };
 
 export default Filter;
