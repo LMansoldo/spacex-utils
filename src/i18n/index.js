@@ -15,6 +15,10 @@ i18n
 	.init({
 		debug: true,
 		resources,
+		react: {
+			useSuspense: false,
+		},
+		initImmediate: false,
 		lng: navigator.language,
 		interpolation: {
 			escapeValue: false,

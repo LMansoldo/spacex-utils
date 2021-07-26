@@ -55,10 +55,10 @@ describe('Card', () => {
 					name={name}
 					charge={payload_weights}
 					status={active}
-					diameter={diameter}
+					diameter={diameter.meters}
 					description={description}
 					engines={engines}
-					height={height}
+					height={height.meters}
 					stages={stages}
 				/>
 			</ContextTest>
@@ -74,10 +74,10 @@ describe('Card', () => {
 					name={name}
 					charge={payload_weights}
 					status={active}
-					diameter={diameter}
+					diameter={diameter.meters}
 					description={description}
 					engines={engines}
-					height={height}
+					height={height.meters}
 					stages={stages}
 				/>
 			</ContextTest>
@@ -93,10 +93,10 @@ describe('Card', () => {
 					name={name}
 					charge={payload_weights}
 					status={active}
-					diameter={diameter}
+					diameter={diameter.meters}
 					description={description}
 					engines={engines}
-					height={height}
+					height={height.meters}
 					stages={stages}
 				/>
 			</ContextTest>
