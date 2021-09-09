@@ -1,22 +1,40 @@
-# SPACEX - Utilitários
+<h1 align="left">
+    <a href="https://lmansoldo.github.io/spacex-utils">🔗 SPACEX - Utilitários</a>
+</h1>
+<p align="center"> Um simples agregador de informações de foguetes da SpaceX para reactjs</p>
+<div>
+	<img src="https://img.shields.io/github/last-commit/lmansoldo/spacex-utils">
+	<img alt="GitHub" src="https://img.shields.io/github/license/lmansoldo/spacex-utils">
+	<img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/lmansoldo/spacex-utils/Build%20and%20Deploy">
+	<img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/lmansoldo/spacex-utils/Build%20and%20Deploy/main">
+</div>
+<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Demo -> <a href="https://lmansoldo.github.io/spacex-utils">🔗 SPACEX Utils</a>
 
-## Scripts disponíveis
+### Pré-requisitos
 
-### `yarn start`
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-Roda no modo desenvolvedor.
-Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
+### 🎲 Rodando o projeto
 
-### `yarn test`
+```bash
+# Clone este repositório
+$ git clone <https://github.com/lmansoldo/spacex-utils>
 
-Dispara o script de testes do Jest
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Acesse a pasta do projeto no terminal/cmd
+$ cd spacex-utils
 
-### `yarn build`
+# Instale as dependências
+$ yarn
 
-Builda o app para produção na pasta `build`.
+# Execute a aplicação em modo de desenvolvimento
+$ yarn start
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
 Este projeto possui ferramentas de internacionalização, com linguagens PT-BR e EN-US disponíveis.
 
@@ -31,3 +49,4 @@ Quer ver o app rodando? Veja a [Demo](https://lmansoldo.github.io/spacex-utils)
 - Ferramenta de cache para CRUD local
 - Tela de perfil para controle das suas buscas
 - Disponibilização de filtro avançado de busca para mais dados da ferramenta
+
